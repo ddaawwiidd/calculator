@@ -1,6 +1,5 @@
 var HomePage = function(){
 	
-	//methods
 	this.clearForm = function(){
 		element(by.css("#calculatorInput")).clear();
 	};
@@ -8,11 +7,7 @@ var HomePage = function(){
 	this.getResult = function(){
 		return element(by.css("#calculatorInput")).getAttribute('value');
 	};
-	
-	this.fillForm = function(operation){
-		element(by.css("#calculatorInput")).sendKeys(operation);
-	};
-	
+
 	this.clickEqual = function(){
 		element(by.css("#btnResult")).click();
 	};
