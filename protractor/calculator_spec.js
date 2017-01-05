@@ -54,10 +54,29 @@ describe("Calculator", function(){
 		expect(page.getResult()).toBe('4');
 	});	
 	
-	xit("Should be able to divide 2 numbers", function(){
+	it("Should be able to divide 2 numbers", function(){
 		page.clickNumber(2);
 		page.clickDivide();
 		page.clickNumber(2);
+		page.clickEqual();
+		expect(page.getResult()).toBe('1');
+	});
+	
+	it("Should be able to perform operations when operation is typed in thr input field", function(){
+		page.clearForm();
+		page.fillForm(2+2);
+		page.clickEqual();
+		expect(page.getResult()).toBe('4');
+		page.clearForm();
+		page.fillForm(2-2);
+		page.clickEqual();
+		expect(page.getResult()).toBe('0');
+		page.clearForm();
+		page.fillForm(2*2);
+		page.clickEqual();
+		expect(page.getResult()).toBe('4');
+		page.clearForm();
+		page.fillForm(2/2);
 		page.clickEqual();
 		expect(page.getResult()).toBe('1');
 	});

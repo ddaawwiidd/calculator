@@ -4,6 +4,10 @@ var HomePage = function(){
 		element(by.css("#calculatorInput")).clear();
 	};
 	
+	this.fillForm = function(operation){
+		element(by.css("#calculatorInput")).sendKeys(operation);
+	};
+	
 	this.getResult = function(){
 		return element(by.css("#calculatorInput")).getAttribute('value');
 	};
