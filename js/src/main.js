@@ -37,7 +37,7 @@ var Calculator = {
 				Calculator.multiply(this.x, this.y);
 				break;
 			case "/":
-				Calculator.multiply(this.x, this.y);
+				Calculator.divide(this.x, this.y);
 				break;
 		};
 		console.log(this.result);
