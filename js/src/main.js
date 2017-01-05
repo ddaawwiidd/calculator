@@ -41,49 +41,48 @@ var Calculator = {
 				break;
 		};
 		console.log(this.result);
-		document.getElementById("calculatorInput").value = this.result;
-		
+		document.getElementById("calculatorInput").value = this.result;	
 	},
 	
 	add: function(x,y){
-		if(typeof(x) !== 'undefined' && typeof(y) !== 'undefined'){
-			this.result = x + y;
+		if(isNaN(x) == true || isNaN(y) == true){
+			this.result = "Provide second number";
 			return this.result;
 		} else {
-			this.result = "Provide second number";
+			this.result = x + y;
 			return this.result;
 		};
 	},
 	
 	subtract: function(x,y){
-		if(typeof(x) !== 'undefined' && typeof(y) !== 'undefined'){
-			this.result = x - y;
+		if(isNaN(x) == true || isNaN(y) == true){
+			this.result = "Provide second number";
 			return this.result;
 		} else {
-			this.result = "Provide second number";
+			this.result = x - y;
 			return this.result;
 		};
 	},
 	
 	multiply: function(x,y){
-		if(typeof(x) !== 'undefined' && typeof(y) !== 'undefined'){
-			this.result = x * y;
+		if(isNaN(x) == true || isNaN(y) == true){
+			this.result = "Provide second number";
 			return this.result;
 		} else {
-			this.result = "Provide second number"
+			this.result = x * y;
 			return this.result;
 		};
 	},
 	
 	divide: function(x,y){
-		if(typeof(x) !== 'undefined' && y !== 0 && typeof(y) !== 'undefined'){
-			this.result = x / y;
-			return this.result;
-		} else if (y == 0){
+		if(y == 0){
 			this.result = "You can't divide by zero";
 			return this.result;
-		} else {
+		} else if (isNaN(x) == true ||isNaN(y) == true){
 			this.result = "Provide second number, and let it not be zero ;)";
+			return this.result;
+		} else {
+			this.result = x / y;
 			return this.result;
 		};
 	}
