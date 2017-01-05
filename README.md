@@ -2,7 +2,7 @@
 
 <p>Training project to practice BDD with Jasmine unit testing and e2e testing with Protractor.</p>
 
-<h4>Resources</h4>
+<h3>Resources</h3>
 
 <h5>JASMINE</h5>
 
